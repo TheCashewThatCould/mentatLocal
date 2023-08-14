@@ -1,0 +1,55 @@
+@@start
+{
+    "file": "core/script.py",
+    "action": "insert",
+    "insert-after-line": 3,
+    "insert-before-line": 4
+}
+@@code
+    if name == "Bob":
+        print("Nice to see you again!")
+@@end
+@@start
+{
+    "file": "core/utils.py",
+    "action": "create-file"
+}
+@@code
+def get_name():
+    return input("Enter your name: ")
+@@end
+@@start
+{
+    "file": "core/script.py",
+    "action": "insert",
+    "insert-after-line": 0,
+    "insert-before-line": 1
+}
+@@code
+from core.utils import get_name
+@@end
+@@start
+{
+    "file": "core/script.py",
+    "action": "replace",
+    "start-line": 10,
+    "end-line": 10
+}
+@@code
+def main():
+    name = get_name()
+@@end
+@@start
+{
+    "file": "core/script.py",
+    "action": "delete",
+    "start-line": 13,
+    "end-line": 13
+}
+@@end
+@@start
+{
+    "file": "core/hello_world.py",
+    "action": "delete-file"
+}
+@@end
