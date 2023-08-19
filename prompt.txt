@@ -73,8 +73,7 @@ Steps:
 {
     "file": "core/script.py",
     "action": "insert",
-    "insert-after-line": 3,
-    "insert-before-line": 4
+    "start": 3
 }
 @@code
     if name == "Bob":
@@ -93,8 +92,7 @@ def get_name():
 {
     "file": "core/script.py",
     "action": "insert",
-    "insert-after-line": 0,
-    "insert-before-line": 1
+    "start": 0
 }
 @@code
 from core.utils import get_name
@@ -103,8 +101,8 @@ from core.utils import get_name
 {
     "file": "core/script.py",
     "action": "replace",
-    "start-line": 10,
-    "end-line": 10
+    "start": 10,
+    "end": 10
 }
 @@code
 def main():
@@ -114,13 +112,13 @@ def main():
 {
     "file": "core/script.py",
     "action": "delete",
-    "start-line": 13,
-    "end-line": 13
+    "start": 13,
+    "end": 13
 }
 @@end
 @@start
 {
     "file": "core/hello_world.py",
-    "action": "delete-file",
+    "action": "delete-file"
 }
 @@end
